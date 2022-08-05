@@ -150,29 +150,25 @@ const Comments = ({ postID, openComment }) => {
                                     </div>
                                 ) : null
                             )}
-                        {/* <Comment /> */}
-                        {/* <div className="card">
-                    <div className="card-body"> */}
-                        <div className="col">
-                            <form style={{ width: "100%" }}>
-                                <input
-                                    className="form-control p-1"
-                                    type="text"
-                                    placeholder="Write a comment..."
-                                    value={textContent}
-                                    onChange={(e) => {
-                                        setTextContent(e.target.value);
-                                    }}
-                                ></input>
-                                <input
-                                    type="button"
-                                    className="btn btn-dark"
-                                    value="Send"
-                                    onClick={() => {
-                                        onSend(postID);
-                                    }}
-                                />
-                            </form>
+                        <div className="col d-flex flex-row add-comment-section">
+                            <input
+                                className="form-control p-1 mr-3"
+                                type="text"
+                                placeholder="Write a comment..."
+                                value={textContent}
+                                onChange={(e) => {
+                                    setTextContent(e.target.value);
+                                }}
+                            ></input>
+
+                            <input
+                                type="button"
+                                className="btn btn-dark "
+                                value="Send"
+                                onClick={() => {
+                                    onSend(postID);
+                                }}
+                            />
                         </div>
                     </div>
                 )}
